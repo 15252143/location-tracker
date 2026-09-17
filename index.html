@@ -1,1 +1,32 @@
-
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Photo with Link</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('photo.jpg') no-repeat center center; / This is your uploaded photo /
+            background-size: cover;
+            height: 100vh;
+        }
+        .overlay {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 100px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.7);
+            border: 2px solid #000;
+            text-align: center;
+            line-height: 40px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="overlay" onclick="window.location.href='https://your-tracking-url.com/track'">Click Me</div>
+</body>
+</html>

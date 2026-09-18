@@ -1,38 +1,60 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Photo with Link</title>
     <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
         body {
             margin: 0;
             padding: 0;
-            background: url('photo.jpg') no-repeat center center; / This is your uploaded photo /
+           background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTKvQepT-A98k4XeQIRkcKMs80GBa4RMO7aSEvaXoutaA&s=10') no-repeat center center;
             background-size: cover;
             height: 100vh;
+            width: 100vw;
+            overflow: hidden;
+            position: relative;
         }
+        
         .overlay {
             position: absolute;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 100px;
-            height: 40px;
-            background: rgba(255, 255, 255, 0.7);
+            width: 150px;
+            height: 50px;
+            background: rgba(255, 255, 255, 0.8);
             border: 2px solid #000;
+            border-radius: 8px;
             text-align: center;
-            line-height: 40px;
-            font-size: 16px;
+            line-height: 50px;
+            font-size: 18px;
+            font-weight: bold;
             cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+        }
+        
+        .overlay:hover {
+            background: rgba(255, 255, 255, 0.95);
+            transform: translate(-50%, -50%) scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+        }
+        
+        .overlay:active {
+            transform: translate(-50%, -50%) scale(0.98);
         }
     </style>
 </head>
 <body>
-    <div class="overlay" onclick="window.location.href='https://startle-canary-fastball.ngrok-free.dev.
-
-'">Click Me</div>
+    <div class="overlay" onclick="window.location.href='https://startle-canary-fastball.ngrok-free.dev'">
+        Click Me
+    </div>
 </body>
 </html>
-
-
-
-
